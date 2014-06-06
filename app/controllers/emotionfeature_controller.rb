@@ -1,0 +1,2 @@
+class EmotionfeatureController < ApplicationController
+end
