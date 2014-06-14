@@ -1,2 +1,144 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<html>
+
+<head>
+<title>EmotIntel</title>
+<style type="text/css">
+h1 {color: green;}
+h2 {color: blue;}
+h3 {color: black;}
+</style>
+</head>
+
+<body>
+
+<div id="container" style="width:1000px">
+
+<div id="header" style="background-color:#FFA500;height:75px;width:1170px">
+<h1>Emot<em>Intel</h1></div>
+
+<div><h2>Cartoon Challenge</h2></div>
+<div><h3>Create a character feeling</h3>
+  <%= select_tag("feeling", options_from_collection_for_select(@emotions, "id", "feeling")) %>
+  
+
+<!-- Add boxes to display face, position head choice, space locations for selected brows, eyes, and mouth-->
+<div style="background-color:#fffff;height:600px;width:300px;padding:10px;float:left;"><h3>Choose Your Head</h3>
+<br>
+     <img style="align:center;" src="http://emotintelapp.homestead.com/AA_boy_head.jpg"></div>
+
+<div id="Cartoon Features" style="background-color:#3F9C2D;height:450px;width:420px;padding:20;margin: 20px;float:left;"> 
+<h3>Using These Features</h3>
+<p>Click on one set of eyebrows, one set of eyes and a mouth to build your character's expression.</p>
+<!-- add four columns by two rows each for brows, eyes, and mouth. -->
+<table>
+<table width="416" height="318" border="0" cellpadding="0">
+<tr><td>Eyebrows</td></tr>
+<td align="center" valign="center">
+<img src="http://pic-michel-101372.use1-2.nitrousbox.com/uploads/brow/image/1/brow1.jpg" >
+</td>
+<td align="center" valign="center">
+<img src="http://pic-michel-101372.use1-2.nitrousbox.com/uploads/brow/image/2/brow2.jpg">
+</td>
+<td align="center" valign="center">
+<img src="http://pic-michel-101372.use1-2.nitrousbox.com/uploads/brow/image/3/brow3.jpg" />
+</td>
+<td align="center" valign="center">
+<img src="http://pic-michel-101372.use1-2.nitrousbox.com/uploads/brow/image/4/brow4.jpg" />
+</td>
+</tr>
+<tr>
+<td align="center" valign="center">
+<img src="http://pic-michel-101372.use1-2.nitrousbox.com/uploads/brow/image/5/brow5.jpg" />
+</td>
+<td align="center" valign="center">
+<img src="http://pic-michel-101372.use1-2.nitrousbox.com/uploads/brow/image/6/brow6.jpg" />
+</td>
+<td align="center" valign="center">
+<img src="http://pic-michel-101372.use1-2.nitrousbox.com/uploads/brow/image/7/brow8.jpg" />
+</td>
+<td align="center" valign="center">
+<img src="http://pic-michel-101372.use1-2.nitrousbox.com/uploads/brow/image/8/brow7.jpg" />
+</td>
+</tr>
+
+<tr></tr>
+<tr><td>Eyes</td></tr>
+<tr></tr>
+
+<tr>
+<td align="center" valign="center">
+<img src="http://pic-michel-101372.use1-2.nitrousbox.com/uploads/eye/image/1/eye1.jpg" />
+</td>
+<td align="center" valign="center">
+<img src="http://pic-michel-101372.use1-2.nitrousbox.com/uploads/eye/image/2/eye2.jpg" />
+</td>
+<td align="center" valign="center">
+<img src="http://pic-michel-101372.use1-2.nitrousbox.com/uploads/eye/image/3/eye3.jpg" />
+</td>
+<td align="center" valign="center">
+<img src="http://pic-michel-101372.use1-2.nitrousbox.com/uploads/eye/image/4/eye4.jpg" />
+</td>
+</tr>
+
+<tr>
+<td align="center" valign="center">
+<img src="http://pic-michel-101372.use1-2.nitrousbox.com/uploads/eye/image/5/eye5.jpg" />
+</td>
+<td align="center" valign="center">
+<img src="http://pic-michel-101372.use1-2.nitrousbox.com/uploads/eye/image/6/eye6.jpg" />
+</td>
+<td align="center" valign="center">
+<img src="http://pic-michel-101372.use1-2.nitrousbox.com/uploads/eye/image/7/eye7.jpg" />
+</td>
+<td align="center" valign="center">
+<img src="http://pic-michel-101372.use1-2.nitrousbox.com/uploads/eye/image/8/eye8.jpg" />
+</td>
+</tr>
+
+<tr></tr>
+<tr><td>Mouth</td></tr>
+<tr></tr>
+
+<tr>
+<td align="center" valign="center">
+<img src="http://pic-michel-101372.use1-2.nitrousbox.com/uploads/mouth/image/1/mouth1.jpg" />
+</td>
+<td align="center" valign="center">
+<img src="http://pic-michel-101372.use1-2.nitrousbox.com/uploads/mouth/image/2/mouth2.jpg" />
+</td>
+<td align="center" valign="center">
+<img src="http://pic-michel-101372.use1-2.nitrousbox.com/uploads/mouth/image/3/mouth3.jpg" />
+</td>
+<td align="center" valign="center">
+<img src="http://pic-michel-101372.use1-2.nitrousbox.com/uploads/mouth/image/4/mouth4.jpg" />
+</td>
+</tr>
+<tr>
+<td align="center" valign="center">
+<img src="http://pic-michel-101372.use1-2.nitrousbox.com/uploads/mouth/image/5/mouth5.jpg" />
+</td>
+<td align="center" valign="center">
+<img src="http://pic-michel-101372.use1-2.nitrousbox.com/uploads/mouth/image/6/mouth6.jpg" />
+</td>
+<td align="center" valign="center">
+<img src="http://pic-michel-101372.use1-2.nitrousbox.com/uploads/mouth/image/7/mouth7.jpg" />
+</td>
+<td align="center" valign="center">
+<img src="http://pic-michel-101372.use1-2.nitrousbox.com/uploads/mouth/image/8/mouth8.jpg" />
+</td>
+</tr>
+</table>
+</div>
+
+<h3>Keep Track</h3> 
+<p>Check your progress on all three features.  Keep what's working and try click other features to improve your score.  Click save to get your next challenge. You 
+
+can work on any challenge at any time."</p></div>
+
+<p>See Your Scorecard<br>Get Your Next Challenge</p><br><br>Designed By The HeartStudio, llc
+</body>
+
+</html>
+  
+<!--  <h1>Home#index</h1>
+<!-- <p>Find me in app/views/home/index.html.erb</p>

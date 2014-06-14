@@ -1,0 +1,48 @@
+6-14
+
+added to brow model
+class Brow < ActiveRecord::Base
+  has_many :emotion_features
+  has_many :emotions, through: :emotion_features, as: :feature
+end
+
+added to eye model
+class Eye < ActiveRecord::Base
+  has_many :emotion_features
+  has_many :emotions, through: :emotion_features, as: :feature
+end
+
+added to mouth model
+class Mouth < ActiveRecord::Base
+  has_many :emotion_features
+  has_many :emotions, through: :emotion_features, as: :feature
+end
+
+added to emotion model for brows, eyes, and mouths
+class Emotion < ActiveRecord::Base
+  has_many :emotion_features
+  has_many :features, through: :emotion_features
+end
+
+unsure of change to polymorphic  checked  not needed delete emotion feature
+class EmotionFeature < ActiveRecord::Base
+  belongs_to :emotion
+  belongs_to :feature, polymorphic: true
+end
+
+because used rails g model emotion_eye emotion:references eye:references score:integer (and for brow, mouth) fo not need any of this hand coded:
+
+class CreateEmotionFeatures < ActiveRecord::Migration
+  create_table(:emotion_features) do |t|
+    t.integer :emotion_id
+    t.integer :feature_id
+    t.string :feature_type
+    t.integer :score
+  end
+
+  add_index :emotion_features, :emotion_id
+  add_index :emotion_features, :feature_id
+end
+
+
+

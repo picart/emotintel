@@ -1,0 +1,11 @@
+<%= form_for @brow do |f| %>
+<% if @brow.image? %>
+<%= image_tag (@brow.image_url) %>
+<% end %>
+<%= f.file_field :image %>
+<% Emotion.all.each do |emotion| %>
+<%= label_tag "#{emotion.feeling}" %>
+<%= text_field_tag "brow[#{emotion.feeling}]" %>
+<% end %>
+<%= f.submit "upload" %>
+<% end %>
